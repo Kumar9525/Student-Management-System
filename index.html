@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Student List</h1>
+    </div>
+    <div class="container">
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchBar"
+          placeholder="Search by name or email"
+        />
+        <button id="searchBtn" class="search-btn">Search</button>
+      </div>
+
+      <div class="flex-buttons">
+        <button onclick="sortByName('asc')">Sort A &#8594; Z</button>
+        <button onclick="sortByName('desc')">Sort Z &#8594; A</button>
+        <button onclick="sortByMarks()">Sort by Marks</button>
+        <button onclick="showPassing()">Show Passing</button>
+        <button onclick="sortByClass()">Sort by Class</button>
+        <button onclick="sortByGender()">Sort by Gender</button>
+      </div>
+
+      <table id="studentTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Marks</th>
+            <th>Class</th>
+            <th>Passing</th>
+            <th>Gender</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+         <!--Data will be apending here-->
+        </tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
